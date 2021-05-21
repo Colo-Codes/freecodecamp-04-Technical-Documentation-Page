@@ -19,13 +19,8 @@ html {
         display: flex;
         justify-content: center;
         align-items: baseline;
-        flex-flow: wrap;
-
         /* overflow: scroll; FIXME */
 
-    }
-    #navbar-image {
-        width: 150px;
     }
 }
 
@@ -37,9 +32,6 @@ html {
         flex-flow: wrap;
         /* overflow: scroll; FIXME */
     }
-    #navbar-image {
-        width: 50px;
-    }
 }
 
 main {
@@ -50,6 +42,7 @@ main {
 
 /* Navbar */
 #navbar-image {
+    width: 150px;
     margin: 0 auto;
 }
 #navbar-block {
