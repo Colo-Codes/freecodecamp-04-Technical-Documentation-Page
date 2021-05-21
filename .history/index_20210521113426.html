@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/css/index.css" type="text/css">
+    <title>Technical Documentation Page</title>
+</head>
+
+<body>
+    <div id="navbar-margin"></div>
+    <header id="navbar-block">
+        <nav id="navbar">
+            <!-- On the left of screen, fixed (visible) -->
+            <header>
+                <h1>CSS Technical Documentation</h1>
+            </header>
+            <ul>
+                <li><a href="#Normal_Flow" class="nav-link">Normal_Flow</a></li>
+                <li><a href="#Flexbox" class="nav-link">Flexbox</a></li>
+                <li><a href="#Grids" class="nav-link">Grids</a></li>
+                <li><a href="#Floats" class="nav-link">Floats</a></li>
+                <li><a href="#Positioning" class="nav-link">Positioning</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main-doc">
+        <section class="main-section" id="Normal_Flow">
+            <header>
+                <h2>Normal Flow</h2>
+            </header>
+            <p>This article explains normal flow, or the way that webpage elements lay themselves out if you have not
+                changed their
+                layout.</p>
+            <p>As detailed in the last lesson introducing layout, elements on a webpage lay out in the normal flow, if
+                you have not
+                applied any CSS to change the way they behave. And, as we began to discover, you can change how elements
+                behave
+                either by adjusting their position in that normal flow, or removing them from it altogether. Starting
+                with a solid,
+                well-structured document that is readable in normal flow is the best way to begin any webpage. It
+                ensures that your
+                content is readable, even if the user is using a very limited browser or a device such as a screen
+                reader that reads
+                out the content of the page. In addition, as normal flow is designed to make a readable document, by
+                starting in
+                this way you are working with the document rather than fighting against it as you make changes to the
+                layout.</p>
+            <p>Before digging deeper into different layout methods, it is worth revisiting some of the things you will
+                have studied
+                in previous modules with regard to normal document flow.</p>
+            <h3>How are elements laid out by default?</h3>
+            <p>First of all, individual element boxes are laid out by taking the elements' content, then adding any
+                padding, border
+                and margin around them — it's that box model thing again, which we've looked at earlier.
+            </p>
+            <p>By default, a block level element's content fills the available inline space of the parent element
+                containing it,
+                and grows in the block dimension to accommodate its content. Inline elements are the size of their
+                content. You
+                can't set width or height on inline elements — they just sit inside the content of block level elements.
+                If you want
+                to control the size of an inline element in this manner, you need to set it to behave like a block level
+                element
+                with display: block; (or even,display: inline-block; which mixes characteristics from both.)
+            </p>
+            <p>That explains individual elements, but what about how elements interact with one another? The normal
+                layout flow
+                (mentioned in the layout introduction article) is the system by which elements are placed inside the
+                browser's
+                viewport. By default, block-level elements are laid out in the block flow direction, based on the
+                parent's writing
+                mode (initial: horizontal-tb) — each one will appear on a new line below the last one, and they will be
+                separated by
+                any margin that is set on them. In English therefore, or any other horizontal, top to bottom writing
+                mode,
+                block-level elements are laid out vertically.
+            </p>
+            <p>Inline elements behave differently — they don't appear on new lines; instead, they all sit on the same
+                line along
+                with any adjacent (or wrapped) text content, as long as there is space for them to do so inside the
+                width of the
+                parent block level element. If there isn't space, then the overflowing text or elements will move down
+                to a new
+                line.
+            </p>
+            <p>If two adjacent elements both have the margin set on them and the two margins touch, the larger of the
+                two remains,
+                and the smaller one disappears — this is called margin collapsing, and we have met this before too.</p>
+            <p>Let's look at a simple example that explains all of this:</p>
+            <code>&lt;h1&gt;Basic document flow&lt;/h1&gt;
+
+                &lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
+                
+                &lt;p&gt;By default we span 100% of the width of our parent element, and we are as tall as our child content. Our total width and height is our content + padding + border width/height.&lt;/p&gt;
+                
+                &lt;p&gt;We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.&lt;/p&gt;
+                
+                &lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line along with adjacent text nodes, if there is space on the same line. Overflowing inline elements will &lt;span&gt;wrap onto a new line if possible (like this one containing text)&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;</code>
+            <code>body {
+                width: 500px;
+                margin: 0 auto;
+              }
+              
+              p {
+                background: rgba(255,84,104,0.3);
+                border: 2px solid rgb(255,84,104);
+                padding: 10px;
+                margin: 10px;
+              }
+              
+              span {
+                background: white;
+                border: 1px solid black;
+              }</code>
+
+
+        </section>
+
+        <section class="main-section" id="Flexbox">
+            <header>
+                <h2>Flexbox</h2>
+            </header>
+            <p>Flexbox is a one-dimensional layout method for laying out items in rows or columns. Items flex to fill
+                additional space and shrink to fit into smaller spaces. This article explains all the fundamentals.</p>
+            <h3>Why Flexbox?</h3>
+            <p>For a long time, the only reliable cross browser-compatible tools available for creating CSS layouts were
+                things like floats and positioning. These are fine, and they work, but in some ways they are also rather
+                limiting and frustrating.</p>
+            <p>The following simple layout requirements are either difficult or impossible to achieve with such tools,
+                in any kind of convenient, flexible way:</p>
+            <ul>
+                <li>Vertically centering a block of content inside its parent.</li>
+                <li>Making all the children of a container take up an equal amount of the available width/height,
+                    regardless of how much width/height is available.</li>
+                <li>Making all columns in a multiple-column layout adopt the same height even if they contain a
+                    different amount of content.</li>
+            </ul>
+            <p>As you'll see in subsequent sections, flexbox makes a lot of layout tasks much easier. Let's dig in!</p>
+            <h3>Specifying what elements to lay out as flexible boxes</h3>
+            <code>section {
+                display: flex;
+              }</code>
+
+
+        </section>
+
+        <section class="main-section" id="Grids">
+            <header>
+                <h2>Grids</h2>
+            </header>
+            <p>CSS Grid Layout is a two-dimensional layout system for the web. It lets you lay content out in rows and
+                columns, and has many features that make building complex layouts straightforward. This article will
+                give you all you need to know to get started with page layout.</p>
+            <h3>What is grid layout?</h3>
+            <p>A grid is a collection of horizontal and vertical lines creating a pattern against which we can line up
+                our design elements. They help us to create designs where elements don’t jump around or change width as
+                we move from page to page, providing greater consistency on our websites.</p>
+            <p>A grid will typically have columns, rows, and then gaps between each row and column — commonly referred
+                to as gutters.</p>
+            <h3>Defining a grid</h3>
+            <p>As a starting point, download and open the starting point file in your text editor and browser (you can
+                also see it live here). You will see an example with a container, which has some child items. By default
+                these display in normal flow so the boxes display one below the other. We will be working with this file
+                for the first part of this lesson, making changes to see how grid behaves.</p>
+            <p>To define a grid we use the grid value of the display property. As with Flexbox, this switches on Grid
+                Layout, and all of the direct children of the container become grid items. Add this to the CSS inside
+                your file:</p>
+            <code>.container {
+                display: grid;
+            }</code>
+            <p>Unlike flexbox, the items will not immediately look any different. Declaring display: grid gives you a
+                one column grid, so your items will continue to display one below the other as they do in normal flow.
+            </p>
+            <p>We can place things according to these lines by specifying the start and end line. We do this using the
+                following properties:</p>
+            <ul>
+                <li>grid-column-start</li>
+                <li>grid-column-end</li>
+                <li>grid-row-start</li>
+                <li>grid-row-end</li>
+            </ul>
+
+        </section>
+
+        <section class="main-section" id="Floats">
+            <header>
+                <h2>Floats</h2>
+            </header>
+            <p>Originally for floating images inside blocks of text, the float property became one of the most commonly
+                used tools for creating multiple column layouts on webpages. With the advent of flexbox and grid it has
+                now returned to its original purpose, as this article explains.</p>
+            <h3>The background of floats</h3>
+            <p>The float property was introduced to allow web developers to implement simple layouts involving an image
+                floating inside a column of text, with the text wrapping around the left or right of it. The kind of
+                thing you might get in a newspaper layout.</p>
+            <p>But web developers quickly realized that you can float anything, not just images, so the use of float
+                broadened, for example to fun layout effects such as drop-caps.</p>
+            <p>Floats have commonly been used to create entire web site layouts featuring multiple columns of
+                information floated so they sit alongside one another (the default behavior would be for the columns to
+                sit below one another, in the same order as they appear in the source). There are newer, better layout
+                techniques available and so use of floats in this way should be regarded as a legacy technique.</p>
+            <h3>A simple float example</h3>
+            <p>Let's explore how to use floats. We'll start with a really simple example involving floating a block of
+                text around an element. You can follow along by creating a new index.html file on your computer, filling
+                it with a simple HTML template, and inserting the below code into it at the appropriate places. At the
+                bottom of the section, you can see a live example of what the final code should look like.</p>
+            <p>First, we'll start off with some simple HTML — add the following to your HTML body, removing anything
+                that was inside there before:</p>
+            <code>&lt;h1&gt;Simple float example&lt;/h1&gt;
+
+                &lt;div class="box"&gt;Float&lt;/div&gt;
+                
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. &lt;/p&gt;
+                
+                &lt;p&gt;Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
+                
+                &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
+            </code>
+            <p>Now apply the following CSS to your HTML (using a &lt;style&gt; element or a
+                <link> to a separate .css file — your choice):
+            </p>
+            <code>
+                body {
+                    width: 90%;
+                    max-width: 900px;
+                    margin: 0 auto;
+                    font: .9em/1.2 Arial, Helvetica, sans-serif
+                  }
+                  
+                  .box {
+                    width: 150px;
+                    height: 100px;
+                    border-radius: 5px;
+                    background-color: rgb(207,232,220);
+                    padding: 1em;
+                  }
+                </code>
+
+        </section>
+
+        <section class="main-section" id="Positioning">
+            <header>
+                <h2>Positioning</h2>
+            </header>
+            <p>Positioning allows you to take elements out of the normal document layout flow, and make them behave
+                differently; for example sitting on top of one another, or always remaining in the same place inside the
+                browser viewport. This article explains the different position values, and how to use them.</p>
+            <ul>
+                <li>Default value: static</li>
+                <li>Inherited: no</li>
+                <li>Animatable: no. Read about animatable</li>
+                <li>Version: CSS2</li>
+                <li>JavaScript syntax: object.style.position="absolute"</li>
+            </ul>
+            <h3>Introducing positioning</h3>
+            <p>The whole idea of positioning is to allow us to override the basic document flow behavior described
+                above, to produce interesting effects. What if you want to slightly alter the position of some boxes
+                inside a layout from their default layout flow position, to give a slightly quirky, distressed feel?
+                Positioning is your tool. Or if you want to create a UI element that floats over the top of other parts
+                of the page, and/or always sits in the same place inside the browser window no matter how much the page
+                is scrolled? Positioning makes such layout work possible.</p>
+            <h3>Static positioning</h3>
+            <p>Static positioning is the default that every element gets — it just means "put the element into its
+                normal position in the document layout flow — nothing special to see here."</p>
+        </section>
+    </main>
+    <footer>
+        <p>All content was gathered from <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout" target="_blank">MDN</a></p>
+        By Damian Demasi &copy;
+    </footer>
+</body>
+
+</html>

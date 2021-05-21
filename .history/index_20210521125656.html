@@ -7,9 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./resources/css/index.css" type="text/css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pattaya&family=Roboto+Mono:wght@100;400;700&display=swap"
-        rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pattaya&family=Roboto+Mono:wght@100;400;700&display=swap" rel="stylesheet">
 
     <title>CSS Technical Documentation</title>
 </head>
@@ -109,7 +107,8 @@
                     and the smaller one disappears — this is called margin collapsing, and we have met this before too.
                 </p>
                 <p>Let's look at a simple example that explains all of this:</p>
-                <code>&lt;h1&gt;Basic document flow&lt;/h1&gt;
+                <code>
+&lt;h1&gt;Basic document flow&lt;/h1&gt;
 
 &lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
 
@@ -117,8 +116,10 @@
 
 &lt;p&gt;We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.&lt;/p&gt;
 
-&lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line along with adjacent text nodes, if there is space on the same line. Overflowing inline elements will &lt;span&gt;wrap onto a new line if possible (like this one containing text)&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;</code>
-                <code>body {
+&lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line along with adjacent text nodes, if there is space on the same line. Overflowing inline elements will &lt;span&gt;wrap onto a new line if possible (like this one containing text)&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;
+                </code>
+                <code>
+body {
     width: 500px;
     margin: 0 auto;
 }
@@ -165,9 +166,11 @@ span {
                 <p>As you'll see in subsequent sections, flexbox makes a lot of layout tasks much easier. Let's dig in!
                 </p>
                 <h3>Specifying what elements to lay out as flexible boxes</h3>
-                <code>section {
+                <code>
+section {
     display: flex;
-}</code>
+}
+            </code>
 
 
             </section>
@@ -202,9 +205,11 @@ span {
                     Layout, and all of the direct children of the container become grid items. Add this to the CSS
                     inside
                     your file:</p>
-                <code>.container {
+                <code>
+.container {
     display: grid;
-}</code>
+}
+        </code>
                 <p>Unlike flexbox, the items will not immediately look any different. Declaring display: grid gives you
                     a
                     one column grid, so your items will continue to display one below the other as they do in normal
@@ -254,7 +259,8 @@ span {
                     bottom of the section, you can see a live example of what the final code should look like.</p>
                 <p>First, we'll start off with some simple HTML — add the following to your HTML body, removing anything
                     that was inside there before:</p>
-                <code>&lt;h1&gt;Simple float example&lt;/h1&gt;
+                <code>
+&lt;h1&gt;Simple float example&lt;/h1&gt;
 
 &lt;div class="box"&gt;Float&lt;/div&gt;
 
@@ -262,11 +268,13 @@ span {
 
 &lt;p&gt;Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
 
-&lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;</code>
+&lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
+            </code>
                 <p>Now apply the following CSS to your HTML (using a &lt;style&gt; element or a
                     <link> to a separate .css file — your choice):
                 </p>
-                <code>body {
+                <code>
+body {
     width: 90%;
     max-width: 900px;
     margin: 0 auto;
@@ -279,7 +287,8 @@ span {
     border-radius: 5px;
     background-color: rgb(207,232,220);
     padding: 1em;
-}</code>
+}
+                </code>
 
             </section>
 

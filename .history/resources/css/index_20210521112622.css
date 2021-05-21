@@ -1,0 +1,36 @@
+/* TODO - My Technical Documentation page should use at least one media query. */
+
+/* Reset */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+
+#navbar {
+    align-self: center;
+    position: sticky;
+    top: 20px;
+}
+
+#Flexbox {
+    position: sticky;
+    top: 20px;
+
+}
+
+#Grids {
+    position: sticky;
+    top: 20px;
+}

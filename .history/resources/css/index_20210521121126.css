@@ -1,0 +1,44 @@
+/* TODO - My Technical Documentation page should use at least one media query. */
+
+/* Reset */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+#flex-container {
+    position: relative;
+    display: flex;
+    /* flex-flow: wrap; */
+    /* align-items: flex-start; */
+    align-items: baseline;
+}
+main {
+    align-self: flex-start;
+}
+
+#navbar-margin {
+    margin-top: 200px;
+    outline: 1px solid blue;
+}
+#navbar-block {
+    position: sticky;
+    top: 20px;
+    outline: 1px solid red;
+    width: 200px;
+}
+
+#Flexbox {
+    position: sticky;
+    top: -1px;
+    outline: 1px solid red;
+
+}
+
+

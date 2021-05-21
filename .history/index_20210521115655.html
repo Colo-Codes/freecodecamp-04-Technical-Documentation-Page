@@ -6,12 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./resources/css/index.css" type="text/css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pattaya&family=Roboto+Mono:wght@100;400;700&display=swap"
-        rel="stylesheet">
-
-    <title>CSS Technical Documentation</title>
+    <title>Technical Documentation Page</title>
 </head>
 
 <body>
@@ -21,7 +16,7 @@
             <nav id="navbar">
                 <!-- On the left of screen, fixed (visible) -->
                 <header>
-                    <h1>CSS</h1>
+                    <h1>CSS Technical Documentation</h1>
                 </header>
                 <ul>
                     <li><a href="#Normal_Flow" class="nav-link">Normal_Flow</a></li>
@@ -34,7 +29,7 @@
         </header>
         <main id="main-doc">
             <section class="main-section" id="Normal_Flow">
-                <header class="section-header">
+                <header>
                     <h2>Normal Flow</h2>
                 </header>
                 <p>This article explains normal flow, or the way that webpage elements lay themselves out if you have
@@ -111,35 +106,35 @@
                 <p>Let's look at a simple example that explains all of this:</p>
                 <code>&lt;h1&gt;Basic document flow&lt;/h1&gt;
 
-&lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
-
-&lt;p&gt;By default we span 100% of the width of our parent element, and we are as tall as our child content. Our total width and height is our content + padding + border width/height.&lt;/p&gt;
-
-&lt;p&gt;We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.&lt;/p&gt;
-
-&lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line along with adjacent text nodes, if there is space on the same line. Overflowing inline elements will &lt;span&gt;wrap onto a new line if possible (like this one containing text)&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;</code>
+                &lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
+                
+                &lt;p&gt;By default we span 100% of the width of our parent element, and we are as tall as our child content. Our total width and height is our content + padding + border width/height.&lt;/p&gt;
+                
+                &lt;p&gt;We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.&lt;/p&gt;
+                
+                &lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line along with adjacent text nodes, if there is space on the same line. Overflowing inline elements will &lt;span&gt;wrap onto a new line if possible (like this one containing text)&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;</code>
                 <code>body {
-    width: 500px;
-    margin: 0 auto;
-}
-
-p {
-    background: rgba(255,84,104,0.3);
-    border: 2px solid rgb(255,84,104);
-    padding: 10px;
-    margin: 10px;
-}
-
-span {
-    background: white;
-    border: 1px solid black;
-}</code>
+                width: 500px;
+                margin: 0 auto;
+              }
+              
+              p {
+                background: rgba(255,84,104,0.3);
+                border: 2px solid rgb(255,84,104);
+                padding: 10px;
+                margin: 10px;
+              }
+              
+              span {
+                background: white;
+                border: 1px solid black;
+              }</code>
 
 
             </section>
 
             <section class="main-section" id="Flexbox">
-                <header class="section-header">
+                <header>
                     <h2>Flexbox</h2>
                 </header>
                 <p>Flexbox is a one-dimensional layout method for laying out items in rows or columns. Items flex to
@@ -166,14 +161,14 @@ span {
                 </p>
                 <h3>Specifying what elements to lay out as flexible boxes</h3>
                 <code>section {
-    display: flex;
-}</code>
+                display: flex;
+              }</code>
 
 
             </section>
 
             <section class="main-section" id="Grids">
-                <header class="section-header">
+                <header>
                     <h2>Grids</h2>
                 </header>
                 <p>CSS Grid Layout is a two-dimensional layout system for the web. It lets you lay content out in rows
@@ -203,8 +198,8 @@ span {
                     inside
                     your file:</p>
                 <code>.container {
-    display: grid;
-}</code>
+                display: grid;
+            }</code>
                 <p>Unlike flexbox, the items will not immediately look any different. Declaring display: grid gives you
                     a
                     one column grid, so your items will continue to display one below the other as they do in normal
@@ -223,7 +218,7 @@ span {
             </section>
 
             <section class="main-section" id="Floats">
-                <header class="section-header">
+                <header>
                     <h2>Floats</h2>
                 </header>
                 <p>Originally for floating images inside blocks of text, the float property became one of the most
@@ -256,35 +251,38 @@ span {
                     that was inside there before:</p>
                 <code>&lt;h1&gt;Simple float example&lt;/h1&gt;
 
-&lt;div class="box"&gt;Float&lt;/div&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. &lt;/p&gt;
-
-&lt;p&gt;Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
-
-&lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;</code>
+                &lt;div class="box"&gt;Float&lt;/div&gt;
+                
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. &lt;/p&gt;
+                
+                &lt;p&gt;Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
+                
+                &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
+            </code>
                 <p>Now apply the following CSS to your HTML (using a &lt;style&gt; element or a
                     <link> to a separate .css file — your choice):
                 </p>
-                <code>body {
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto;
-    font: .9em/1.2 Arial, Helvetica, sans-serif
-}
-
-.box {
-    width: 150px;
-    height: 100px;
-    border-radius: 5px;
-    background-color: rgb(207,232,220);
-    padding: 1em;
-}</code>
+                <code>
+                body {
+                    width: 90%;
+                    max-width: 900px;
+                    margin: 0 auto;
+                    font: .9em/1.2 Arial, Helvetica, sans-serif
+                  }
+                  
+                  .box {
+                    width: 150px;
+                    height: 100px;
+                    border-radius: 5px;
+                    background-color: rgb(207,232,220);
+                    padding: 1em;
+                  }
+                </code>
 
             </section>
 
             <section class="main-section" id="Positioning">
-                <header class="section-header">
+                <header>
                     <h2>Positioning</h2>
                 </header>
                 <p>Positioning allows you to take elements out of the normal document layout flow, and make them behave
