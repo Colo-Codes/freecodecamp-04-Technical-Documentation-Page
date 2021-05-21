@@ -12,15 +12,13 @@
     <header>
         <nav id="navbar">
             <!-- On the left of screen, fixed (visible) -->
-            <header>
-                <h1>CSS Technical Documentation</h1>
-            </header>
+            <header>CSS Technical Documentation</header>
             <ul>
-                <li><a href="#Normal_Flow" class="nav-link">Normal_Flow</a></li>
-                <li><a href="#Flexbox" class="nav-link">Flexbox</a></li>
-                <li><a href="#Grids" class="nav-link">Grids</a></li>
-                <li><a href="#Floats" class="nav-link">Floats</a></li>
-                <li><a href="#Positioning" class="nav-link">Positioning</a></li>
+                <li><a href="#Normal_Flow" class="nav-link">Link text equals to section name</a></li>
+                <li><a href="#Flexbox" class="nav-link">Link text equals to section name</a></li>
+                <li><a href="#Grids" class="nav-link">Link text equals to section name</a></li>
+                <li><a href="#Floats" class="nav-link">Link text equals to section name</a></li>
+                <li><a href="#Positioning" class="nav-link">Link text equals to section name</a></li>
             </ul>
         </nav>
     </header>
@@ -28,7 +26,7 @@
         <!-- technical documentation -->
         <section class="main-section" id="Normal_Flow">
             <header>
-                <h2>Normal Flow</h2>
+                <h1>Normal Flow</h1>
             </header>
             <p>This article explains normal flow, or the way that webpage elements lay themselves out if you have not
                 changed their
@@ -50,7 +48,7 @@
             <p>Before digging deeper into different layout methods, it is worth revisiting some of the things you will
                 have studied
                 in previous modules with regard to normal document flow.</p>
-            <h3>How are elements laid out by default?</h3>
+            <h2>How are elements laid out by default?</h2>
             <p>First of all, individual element boxes are laid out by taking the elements' content, then adding any
                 padding, border
                 and margin around them — it's that box model thing again, which we've looked at earlier.
@@ -120,11 +118,11 @@
 
         <section class="main-section" id="Flexbox">
             <header>
-                <h2>Flexbox</h2>
+                <h1>Flexbox</h1>
             </header>
             <p>Flexbox is a one-dimensional layout method for laying out items in rows or columns. Items flex to fill
                 additional space and shrink to fit into smaller spaces. This article explains all the fundamentals.</p>
-            <h3>Why Flexbox?</h3>
+            <h2>Why Flexbox?</h2>
             <p>For a long time, the only reliable cross browser-compatible tools available for creating CSS layouts were
                 things like floats and positioning. These are fine, and they work, but in some ways they are also rather
                 limiting and frustrating.</p>
@@ -138,7 +136,7 @@
                     different amount of content.</li>
             </ul>
             <p>As you'll see in subsequent sections, flexbox makes a lot of layout tasks much easier. Let's dig in!</p>
-            <h3>Specifying what elements to lay out as flexible boxes</h3>
+            <h2>Specifying what elements to lay out as flexible boxes</h2>
             <code>section {
                 display: flex;
               }</code>
@@ -148,18 +146,18 @@
 
         <section class="main-section" id="Grids">
             <header>
-                <h2>Grids</h2>
+                <h1>Grids</h1>
             </header>
             <p>CSS Grid Layout is a two-dimensional layout system for the web. It lets you lay content out in rows and
                 columns, and has many features that make building complex layouts straightforward. This article will
                 give you all you need to know to get started with page layout.</p>
-            <h3>What is grid layout?</h3>
+            <h2>What is grid layout?</h2>
             <p>A grid is a collection of horizontal and vertical lines creating a pattern against which we can line up
                 our design elements. They help us to create designs where elements don’t jump around or change width as
                 we move from page to page, providing greater consistency on our websites.</p>
             <p>A grid will typically have columns, rows, and then gaps between each row and column — commonly referred
                 to as gutters.</p>
-            <h3>Defining a grid</h3>
+            <h2>Defining a grid</h2>
             <p>As a starting point, download and open the starting point file in your text editor and browser (you can
                 also see it live here). You will see an example with a container, which has some child items. By default
                 these display in normal flow so the boxes display one below the other. We will be working with this file
@@ -186,12 +184,12 @@
 
         <section class="main-section" id="Floats">
             <header>
-                <h2>Floats</h2>
+                <h1>Floats</h1>
             </header>
             <p>Originally for floating images inside blocks of text, the float property became one of the most commonly
                 used tools for creating multiple column layouts on webpages. With the advent of flexbox and grid it has
                 now returned to its original purpose, as this article explains.</p>
-            <h3>The background of floats</h3>
+            <h2>The background of floats</h2>
             <p>The float property was introduced to allow web developers to implement simple layouts involving an image
                 floating inside a column of text, with the text wrapping around the left or right of it. The kind of
                 thing you might get in a newspaper layout.</p>
@@ -201,7 +199,7 @@
                 information floated so they sit alongside one another (the default behavior would be for the columns to
                 sit below one another, in the same order as they appear in the source). There are newer, better layout
                 techniques available and so use of floats in this way should be regarded as a legacy technique.</p>
-            <h3>A simple float example</h3>
+            <h2>A simple float example</h2>
             <p>Let's explore how to use floats. We'll start with a really simple example involving floating a block of
                 text around an element. You can follow along by creating a new index.html file on your computer, filling
                 it with a simple HTML template, and inserting the below code into it at the appropriate places. At the
@@ -242,7 +240,7 @@
 
         <section class="main-section" id="Positioning">
             <header>
-                <h2>Positioning</h2>
+                <h1>Positioning</h1>
             </header>
             <p>Positioning allows you to take elements out of the normal document layout flow, and make them behave
                 differently; for example sitting on top of one another, or always remaining in the same place inside the
@@ -254,14 +252,14 @@
                 <li>Version: CSS2</li>
                 <li>JavaScript syntax: object.style.position="absolute"</li>
             </ul>
-            <h3>Introducing positioning</h3>
+            <h2>Introducing positioning</h2>
             <p>The whole idea of positioning is to allow us to override the basic document flow behavior described
                 above, to produce interesting effects. What if you want to slightly alter the position of some boxes
                 inside a layout from their default layout flow position, to give a slightly quirky, distressed feel?
                 Positioning is your tool. Or if you want to create a UI element that floats over the top of other parts
                 of the page, and/or always sits in the same place inside the browser window no matter how much the page
                 is scrolled? Positioning makes such layout work possible.</p>
-            <h3>Static positioning</h3>
+            <h2>Static positioning</h2>
             <p>Static positioning is the default that every element gets — it just means "put the element into its
                 normal position in the document layout flow — nothing special to see here."</p>
         </section>

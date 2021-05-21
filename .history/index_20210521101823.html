@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Page</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar"> <!-- On the left of screen, fixed (visible) -->
+            <header>CSS Technical Documentation</header>
+            <ul>
+                <li><a href="#section" class="nav-link">Link text equals to section name</a></li>
+                <li><a href="#section" class="nav-link">Link text equals to section name</a></li>
+                <li><a href="#section" class="nav-link">Link text equals to section name</a></li>
+                <li><a href="#section" class="nav-link">Link text equals to section name</a></li>
+                <li><a href="#section" class="nav-link">Link text equals to section name</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main-doc">
+        <!-- technical documentation -->
+        <section class="main-section" id="topic_related TODO">
+            <header>
+                <h1>Normal Flow</h1>
+            </header>
+            <p>This article explains normal flow, or the way that webpage elements lay themselves out if you have not changed their
+                layout.</p>
+            <p>As detailed in the last lesson introducing layout, elements on a webpage lay out in the normal flow, if you have not
+                applied any CSS to change the way they behave. And, as we began to discover, you can change how elements behave
+                either by adjusting their position in that normal flow, or removing them from it altogether. Starting with a solid,
+                well-structured document that is readable in normal flow is the best way to begin any webpage. It ensures that your
+                content is readable, even if the user is using a very limited browser or a device such as a screen reader that reads
+                out the content of the page. In addition, as normal flow is designed to make a readable document, by starting in
+                this way you are working with the document rather than fighting against it as you make changes to the layout.</p>
+            <p>Before digging deeper into different layout methods, it is worth revisiting some of the things you will have studied
+                in previous modules with regard to normal document flow.</p>
+            <h2>How are elements laid out by default?</h2>
+            <p>First of all, individual element boxes are laid out by taking the elements' content, then adding any padding, border
+                and margin around them — it's that box model thing again, which we've looked at earlier.
+            </p>
+            <p>By default, a block level element's content fills the available inline space of the parent element containing it,
+                and grows in the block dimension to accommodate its content. Inline elements are the size of their content. You
+                can't set width or height on inline elements — they just sit inside the content of block level elements. If you want
+                to control the size of an inline element in this manner, you need to set it to behave like a block level element
+                with display: block; (or even,display: inline-block; which mixes characteristics from both.)
+            </p>
+            <p>That explains individual elements, but what about how elements interact with one another? The normal layout flow
+                (mentioned in the layout introduction article) is the system by which elements are placed inside the browser's
+                viewport. By default, block-level elements are laid out in the block flow direction, based on the parent's writing
+                mode (initial: horizontal-tb) — each one will appear on a new line below the last one, and they will be separated by
+                any margin that is set on them. In English therefore, or any other horizontal, top to bottom writing mode,
+                block-level elements are laid out vertically.
+            </p>
+            <p>Inline elements behave differently — they don't appear on new lines; instead, they all sit on the same line along
+                with any adjacent (or wrapped) text content, as long as there is space for them to do so inside the width of the
+                parent block level element. If there isn't space, then the overflowing text or elements will move down to a new
+                line.
+            </p>
+            <p>If two adjacent elements both have the margin set on them and the two margins touch, the larger of the two remains,
+                and the smaller one disappears — this is called margin collapsing, and we have met this before too.</p>
+            <p>Let's look at a simple example that explains all of this:</p>
+            <code><h1>Basic document flow</h1>
+
+                <p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
+                
+                <p>By default we span 100% of the width of our parent element, and we are as tall as our child content. Our total width and height is our content + padding + border width/height.</p>
+                
+                <p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
+                
+                <p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line along with adjacent text nodes, if there is space on the same line. Overflowing inline elements will <span>wrap onto a new line if possible (like this one containing text)</span>, or just go on to a new line if not, much like this image will do: <img src="https://mdn.mozillademos.org/files/13360/long.jpg"></p></code>
+            <code>body {
+                width: 500px;
+                margin: 0 auto;
+              }
+              
+              p {
+                background: rgba(255,84,104,0.3);
+                border: 2px solid rgb(255,84,104);
+                padding: 10px;
+                margin: 10px;
+              }
+              
+              span {
+                background: white;
+                border: 1px solid black;
+              }</code>
+                <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+        </section>
+
+        <section class="main-section" id="topic_related TODO">
+            <header>
+                <h1>Flexbox</h1>
+            </header>
+            <p>Flexbox is a one-dimensional layout method for laying out items in rows or columns. Items flex to fill additional space and shrink to fit into smaller spaces. This article explains all the fundamentals.</p>
+            <h2>Why Flexbox?</h2>
+            <p>For a long time, the only reliable cross browser-compatible tools available for creating CSS layouts were things like floats and positioning. These are fine, and they work, but in some ways they are also rather limiting and frustrating.</p>
+            <p>The following simple layout requirements are either difficult or impossible to achieve with such tools, in any kind of convenient, flexible way:</p>
+            <ul>
+                <li>Vertically centering a block of content inside its parent.</li>
+                <li>Making all the children of a container take up an equal amount of the available width/height, regardless of how much width/height is available.</li>
+                    <li>Making all columns in a multiple-column layout adopt the same height even if they contain a different amount of content.</li>
+            </ul>
+            <p>As you'll see in subsequent sections, flexbox makes a lot of layout tasks much easier. Let's dig in!</p>
+            <h2>Specifying what elements to lay out as flexible boxes</h2>
+            <code>section {
+                display: flex;
+              }</code>
+            
+
+        </section>
+
+        <section class="main-section" id="topic_related TODO">
+            <header>
+                <!-- topic description -->
+            </header>
+            <p></p>
+            <p></p>
+            <code></code>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+        </section>
+
+        <section class="main-section" id="topic_related TODO">
+            <header>
+                <!-- topic description -->
+            </header>
+            <p></p>
+            <p></p>
+            <code></code>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+        </section>
+
+        <section class="main-section" id="topic_related TODO">
+            <header>
+                <!-- topic description -->
+            </header>
+            <p></p>
+            <p></p>
+            <code></code>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+        </section>
+    </main>
+    
+</body>
+</html>
