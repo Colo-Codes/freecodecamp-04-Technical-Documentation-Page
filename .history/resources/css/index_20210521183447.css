@@ -90,9 +90,6 @@ h3 {
     margin: 2rem 0 0 2rem;
     font-size: 1.5rem;
     border-top: 1px dashed rgba(0, 0, 0, .2);
-    color: #1572B6;
-    text-shadow: #33A9DC 1px 1px 1px;
-
 }
 
 /* Code content */
@@ -125,8 +122,7 @@ footer {
     background: linear-gradient(to bottom left, #1572B6, #33A9DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: white;
     text-align: center;
-    padding: .5rem 0;
-    border-top: #1572B6 3px solid;
+    padding: 2rem 0;
 }
 footer a:link, footer a:visited  {
     text-decoration: none;

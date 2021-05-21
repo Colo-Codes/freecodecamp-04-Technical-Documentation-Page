@@ -25,6 +25,17 @@ main {
 }
 
 /* Navbar */
+
+/* #navbar-margin {
+    top: 0;
+    left: 0;
+    /* margin-top: 250px; */
+/*    height: 250px;
+    width: 200px;
+    background-image: linear-gradient(to top, red, blue);
+    align-items: center;
+
+} */
 #navbar-image {
     width: 100%;
     margin: 0 auto;
@@ -33,49 +44,33 @@ main {
     position: sticky;
     top: 20px;
     /* outline: 1px solid red; */
-    margin: 0 2rem 0 2rem;
+    margin: 0 3rem 0 1rem;
 }
-#navbar ul li {
-    list-style-type: none;
-    margin-bottom: 1rem;
+
+#navbar {
 }
-.nav-link:link, .nav-link:visited  {
-    text-decoration: none;
-    border-bottom: 1px dashed #33A9DC;
-    padding-bottom: 5px;
-    color: #33A9DC;
-}
-.nav-link:focus, .nav-link:hover  {
-    border-bottom: 2px solid #1572B6;
-    padding-bottom: 5px;
-    color: #1572B6;
-}
-.nav-link:active  {
-    border-bottom: 2px solid #1572B6;
-    padding-bottom: 5px;
-    color: #1572B6;
-}
+
 #navbar h1 {
     font-family: 'Pattaya', 'Times New Roman', Times, serif;
     font-size: 6rem;
-    color: #1572B6;
-    text-shadow: #33A9DC 5px 5px 1px;
 }
 /* Main content */
 .section-header {
     position: sticky;
-    top: 0px;
+    top: 20px;
     color: white;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
     padding: 5px 0 5px 1rem;
-    background: #33A9DC;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom left, #1572B6, #33A9DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: #FF512F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom left, #DD2476, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom left, #DD2476, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to bottom left, #1572B6, #33A9DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     font-family: 'Bebas Neue', sans-serif;
     text-transform: uppercase;
     font-size: 1.5rem;
+    border-top: 25px solid white;
     border-radius: 10px 0 0 10px;
-    margin: 30px 0 0 0;
+    margin: 25px 0 0 0;
 }
 
 p {
@@ -90,9 +85,6 @@ h3 {
     margin: 2rem 0 0 2rem;
     font-size: 1.5rem;
     border-top: 1px dashed rgba(0, 0, 0, .2);
-    color: #1572B6;
-    text-shadow: #33A9DC 1px 1px 1px;
-
 }
 
 /* Code content */
@@ -111,39 +103,7 @@ code {
 }
 
 /* Unordered lists */
-.main-section ul {
+ul {
     margin: 1rem 0 2rem 4rem;
     list-style-image: url(../img/chevron_right_round-48_46769.png);
-}
-
-/* Footer */
-footer {
-    position: sticky;
-    bottom: 0;
-    background: #33A9DC;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom left, #1572B6, #33A9DC);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom left, #1572B6, #33A9DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: white;
-    text-align: center;
-    padding: .5rem 0;
-    border-top: #1572B6 3px solid;
-}
-footer a:link, footer a:visited  {
-    text-decoration: none;
-    border-bottom: 1px dashed #f7f7f7;
-    padding-bottom: 5px;
-    color: #f7f7f7;
-}
-footer a:focus, footer a:hover  {
-    border-bottom: 2px solid #d8d8d8;
-    padding-bottom: 5px;
-    color: #d8d8d8;
-}
-footer a:active  {
-    border-bottom: 2px solid #d8d8d8;
-    padding-bottom: 5px;
-    color: #d8d8d8;
-}
-footer p {
-    margin: 1rem 0;
 }

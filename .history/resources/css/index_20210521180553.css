@@ -1,0 +1,106 @@
+/* TODO - My Technical Documentation page should use at least one media query. */
+
+/* Reset */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Roboto Mono', Arial, Helvetica, sans-serif;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main flexbox */
+
+#flex-container {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+}
+main {
+    align-self: flex-start;
+}
+
+/* Navbar */
+
+/* #navbar-margin {
+    top: 0;
+    left: 0;
+    /* margin-top: 250px; */
+/*    height: 250px;
+    width: 200px;
+    background-image: linear-gradient(to top, red, blue);
+    align-items: center;
+
+} */
+#navbar-image {
+    width: 75%;
+    margin: 0 0 0 100px;
+}
+#navbar-block {
+    position: sticky;
+    top: 20px;
+    outline: 1px solid red;
+    margin: 0 3rem 0 1rem;
+}
+
+#navbar {
+}
+
+#navbar h1 {
+    font-family: 'Pattaya', 'Times New Roman', Times, serif;
+    font-size: 2rem;
+}
+/* Main content */
+.section-header {
+    position: sticky;
+    top: 0px;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+    padding: 5px 0 5px 1rem;
+    background: #FF512F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom left, #DD2476, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom left, #DD2476, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Bebas Neue', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    border-radius: 10px 0 0 10px;
+}
+
+p {
+    margin: 2rem 5rem 0 1rem;
+
+}
+p::first-letter {
+    font-weight: bold;
+    /* font-size: 1.5rem; */
+}
+h3 {
+    margin: 2rem 0 0 2rem;
+    font-size: 1.5rem;
+    border-top: 1px dashed rgba(0, 0, 0, .2);
+}
+
+/* Code content */
+code {
+    display: block;
+  text-align: left;
+  white-space: pre-wrap;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin: 1rem 5rem 1rem 2rem;
+  border-radius: 5px;
+  border: 1px dashed rgba(0, 0, 0, .2)
+}
+
+/* Unordered lists */
+ul {
+    margin: 1rem 0 2rem 4rem;
+    list-style-image: url(../img/chevron_right_round-48_46769.png);
+}
