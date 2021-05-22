@@ -1,5 +1,4 @@
 /* Reset */
-
 html {
     box-sizing: border-box;
     font-size: 16px;
@@ -22,6 +21,7 @@ html {
         align-items: baseline;
         /* flex-flow: wrap; FIXME */
         /* overflow: scroll; FIXME */
+
     }
     #navbar-image {
         width: 150px;
@@ -50,12 +50,12 @@ html {
     #navbar-block {
         display: flex;
         align-items: baseline;
-        background-color: white;
+        background-color: red;
         margin: 0;
         padding-left: 5rem;
         top: 0px;
-        height: 210px;
-        z-index: 1;
+        height: 220px;
+
     }
     #navbar-image {
         width: 4rem;
@@ -78,7 +78,6 @@ html {
 }
 
 /* Navbar */
-
 #navbar-block {
     position: sticky;
     /* top: 20px; */
@@ -86,42 +85,35 @@ html {
     /* outline: 1px solid red; */
     /* flex: 1; */
 }
-
 #navbar-image {
     margin: 0 auto;
 }
-
 #navbar ul li {
     list-style-type: none;
     margin-bottom: 1rem;
 }
-
-.nav-link:link, .nav-link:visited {
+.nav-link:link, .nav-link:visited  {
     text-decoration: none;
     border-bottom: 1px dashed #33A9DC;
     padding-bottom: 5px;
     color: #33A9DC;
 }
-
-.nav-link:focus, .nav-link:hover {
+.nav-link:focus, .nav-link:hover  {
     border-bottom: 2px solid #1572B6;
     padding-bottom: 5px;
     color: #1572B6;
 }
-
-.nav-link:active {
+.nav-link:active  {
     border-bottom: 2px solid #1572B6;
     padding-bottom: 5px;
     color: #1572B6;
 }
-
 #navbar h1 {
     font-family: 'Pattaya', 'Times New Roman', Times, serif;
     font-size: 6rem;
     color: #1572B6;
     text-shadow: #33A9DC 5px 5px 1px;
 }
-
 /* Main content */
 
 .section-header {
@@ -129,12 +121,9 @@ html {
     color: white;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
     padding: 5px 0 5px 1rem;
-    background: #33A9DC;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom left, #1572B6, #33A9DC);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom left, #1572B6, #33A9DC);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #33A9DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom left, #1572B6, #33A9DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom left, #1572B6, #33A9DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     font-family: 'Bebas Neue', sans-serif;
     text-transform: uppercase;
     font-size: 1.5rem;
@@ -144,6 +133,7 @@ html {
 
 p {
     margin: 2rem 1rem 0 1rem;
+
 }
 
 p::first-letter {
@@ -156,67 +146,58 @@ h3 {
     border-top: 1px dashed rgba(0, 0, 0, .2);
     color: #1572B6;
     text-shadow: #33A9DC 1px 1px 1px;
+
 }
 
 /* Code content */
-
 code {
     display: block;
-    text-align: left;
-    white-space: pre-wrap;
-    word-break: normal;
-    word-wrap: normal;
-    line-height: 1.5;
-    background-color: #f7f7f7;
-    padding: 15px;
-    margin: 1rem 2rem 1rem 2rem;
-    border-radius: 5px;
-    border: 1px dashed rgba(0, 0, 0, .2)
+  text-align: left;
+  white-space: pre-wrap;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin: 1rem 2rem 1rem 2rem;
+  border-radius: 5px;
+  border: 1px dashed rgba(0, 0, 0, .2)
 }
 
 /* Unordered lists */
-
 .main-section ul {
     margin: 1rem 0 2rem 4rem;
     list-style-image: url(../img/chevron_right_round-48_46769.png);
 }
 
 /* Footer */
-
 footer {
     position: sticky;
     bottom: 0;
-    background: #33A9DC;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom left, #1572B6, #33A9DC);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom left, #1572B6, #33A9DC);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #33A9DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom left, #1572B6, #33A9DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom left, #1572B6, #33A9DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: white;
     text-align: center;
     padding: .5rem 0;
     border-top: #1572B6 3px solid;
 }
-
-footer a:link, footer a:visited {
+footer a:link, footer a:visited  {
     text-decoration: none;
     border-bottom: 1px dashed #f7f7f7;
     padding-bottom: 5px;
     color: #f7f7f7;
 }
-
-footer a:focus, footer a:hover {
+footer a:focus, footer a:hover  {
     border-bottom: 2px solid #d8d8d8;
     padding-bottom: 5px;
     color: #d8d8d8;
 }
-
-footer a:active {
+footer a:active  {
     border-bottom: 2px solid #d8d8d8;
     padding-bottom: 5px;
     color: #d8d8d8;
 }
-
 footer p {
     margin: 1rem 0;
 }
