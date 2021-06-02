@@ -12,80 +12,15 @@ html {
     padding: 0;
 }
 
-/* Main flexbox */
-
-@media screen and (min-width: 700px) {
-    #flex-container {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: baseline;
-        /* flex-flow: wrap; FIXME */
-        /* overflow: scroll; FIXME */
-    }
-    #navbar-image {
-        width: 150px;
-    }
-    .section-header {
-        top: 0px;
-    }
-    #navbar-block {
-        top: 20px;
-        margin: 0 2rem;
-    }
-}
-
-@media screen and (max-width: 699px) {
-    #navbar-block {
-        display: flex;
-        justify-content: flex-start;
-    }
-    #navbar {
-        display: flex;
-        justify-content:space-between;
-        align-items: center;
-    }
-    #navbar ul {
-        height: 9rem;
-        overflow: auto;
-    }
-    #navbar-block {
-        display: flex;
-        align-items: center;
-        background-color: white;
-        margin: 0;
-        top: 0px;
-        height: 9rem;
-        z-index: 1; /* text will flow behind this */
-    }
-    #navbar-image {
-        width: 5rem;
-        height: 5rem;
-    }
-    #navbar {
-        flex: 1;
-    }
-    .section-header {
-        top: 9rem;
-    }
-}
-
 #main-doc {
     align-self: flex-start;
     max-width: 1000px;
-    /* Not doing anything: */
-    /* flex-shrink: 1; */
-    /* background-color: teal; FIXME */
 }
 
 /* Navbar */
 
 #navbar-block {
     position: sticky;
-    /* top: 20px; */
-    /* margin: 0 2rem; */
-    /* outline: 1px solid red; */
-    /* flex: 1; */
 }
 
 #navbar-image {
@@ -165,8 +100,7 @@ code {
     display: block;
     text-align: left;
     white-space: pre-wrap;
-    word-break: break-all;
-    /* word-break: normal; <-- this gives problems */
+    word-break: normal;
     word-wrap: normal;
     line-height: 1.5;
     background-color: #f7f7f7;

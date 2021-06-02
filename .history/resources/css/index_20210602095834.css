@@ -38,35 +38,35 @@ html {
 @media screen and (max-width: 699px) {
     #navbar-block {
         display: flex;
-        justify-content: flex-start;
+        /* flex-direction: column; */
     }
     #navbar {
         display: flex;
-        justify-content:space-between;
-        align-items: center;
     }
     #navbar ul {
-        height: 9rem;
+        height: 6.5rem;
+        /* overflow: scroll; */
         overflow: auto;
     }
     #navbar-block {
         display: flex;
-        align-items: center;
+        align-items: baseline;
         background-color: white;
         margin: 0;
+        padding-left: 5rem;
         top: 0px;
-        height: 9rem;
-        z-index: 1; /* text will flow behind this */
+        height: 240px;
+        z-index: 1;
     }
     #navbar-image {
-        width: 5rem;
-        height: 5rem;
+        width: 4rem;
+        height: 4rem;
     }
     #navbar {
         flex: 1;
     }
     .section-header {
-        top: 9rem;
+        top: 240px;
     }
 }
 

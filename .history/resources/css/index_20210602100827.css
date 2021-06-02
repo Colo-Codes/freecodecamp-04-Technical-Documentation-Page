@@ -42,8 +42,7 @@ html {
     }
     #navbar {
         display: flex;
-        justify-content:space-between;
-        align-items: center;
+        justify-content: flex-start;
     }
     #navbar ul {
         height: 9rem;
@@ -66,7 +65,7 @@ html {
         flex: 1;
     }
     .section-header {
-        top: 9rem;
+        top: 240px;
     }
 }
 

@@ -42,11 +42,10 @@ html {
     }
     #navbar {
         display: flex;
-        justify-content:space-between;
-        align-items: center;
+        justify-content: flex-start;
     }
     #navbar ul {
-        height: 9rem;
+        height: 7rem;
         overflow: auto;
     }
     #navbar-block {
@@ -55,7 +54,7 @@ html {
         background-color: white;
         margin: 0;
         top: 0px;
-        height: 9rem;
+        height: 8rem;
         z-index: 1; /* text will flow behind this */
     }
     #navbar-image {
@@ -66,7 +65,7 @@ html {
         flex: 1;
     }
     .section-header {
-        top: 9rem;
+        top: 240px;
     }
 }
 
